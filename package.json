@@ -1,0 +1,27 @@
+{
+  "name": "liri-node-app",
+  "version": "1.0.0",
+  "description": "liri app",
+  "main": "keys.js",
+  "dependencies": {
+    "last-fm": "^5.1.2",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sandjie/liri-node-app.git"
+  },
+  "keywords": [
+    "liri"
+  ],
+  "author": "Sandra Swiatkiewicz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sandjie/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/Sandjie/liri-node-app#readme"
+}
