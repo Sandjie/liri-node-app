@@ -22,22 +22,21 @@ lastfm.trackSearch({ track: 'the greatest' }, (err, data) => {
 
 function myTweets() {
 	var client = new Twitter(keys.twitterKeys);
+
 	var params = {
-		screen_name: 'lirisandj'
+		screen_name: "lirisandj"
 	};
 	// var twitterKeys = keys.twitterKeys;
 	client.get('statuses/user_timeline', params, function(error, tweets, response) {
 		if(!error) {
 			for(var t = 0; t < tweets.length; t++) {
-				console.log(tweets[t]+ created_at);				output = ('\n' + '@' + params.screen_name + ' said ' + tweets[t].text + ' at ' + tweets[t].created_at +'\n');
-				console.log(output);
-				append();
+				console.log(tweets[t].created_at);				
+				console.log('');
+				console.log(tweets[t].text);
 			}
-		} else {
-			console.log('twitter error');
 		}
 	});
-}
+};
 
 function spotifyThisSong() {
 	if(argument == null) {
@@ -111,6 +110,12 @@ function choose() {
 	}
 
 }
+
+var run= function(argOne, argTwo){
+	choose(argOne, argTwo);
+};
+
+run(process.argv[2], process.argv[3]);
 
 function append() {
 	fs.appendFile('log.txt', output, function callback(error) {
